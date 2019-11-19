@@ -1,9 +1,9 @@
 from typing import Union
 
+FloatOrString = Union[float, str]
 
-def divide_numbers(
-    numerator: Union[str, int, float], denominator: Union[str, int, float]
-) -> float:
+
+def divide_numbers(numerator: FloatOrString, denominator: FloatOrString) -> float:
     """For this exercise you can assume numerator and denominator are of type
        int/str/float.
        Try to convert numerator and denominator to int types, if that raises a
@@ -12,12 +12,10 @@ def divide_numbers(
        throws (cannot divide by 0), and return 0"""
     try:
         numerator = int(numerator)
-    except ValueError:
-        raise
-    try:
         denominator = int(denominator)
     except ValueError:
         raise
+
     try:
         return numerator / denominator
     except ZeroDivisionError:
