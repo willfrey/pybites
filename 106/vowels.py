@@ -44,6 +44,4 @@ def strip_vowels(text: str) -> Tuple[str, int]:
        of Python's new type hinting:
        https://docs.python.org/3/library/typing.html
     """
-    num_vowels = len(VOWELS_PATTERN.findall(text))
-    new_text = VOWELS_PATTERN.sub("*", text)
-    return new_text, num_vowels
+    return re.subn(rf"[{vowels}]", "*", text, flags=re.IGNORECASE)
