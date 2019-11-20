@@ -1,5 +1,4 @@
-from collections import Counter
-
+from typing import Set, Counter
 import requests
 
 DATA_URL = "https://bit.ly/2Ov65SJ"
@@ -17,12 +16,16 @@ def most_prolific_automaker(year: str) -> str:
     automakers_by_year = [
         item.get("automaker") for item in DATA if item.get("year") == year
     ]
-    automaker_count = Counter(automakers_by_year)
-    (automaker, _), *_ = automaker_count.most_common()
+    automaker_frequencies = Counter(automakers_by_year)
+    (automaker, _), *_ = automaker_frequencies.most_common()
     return automaker
 
 
-def get_models(automaker, year):
+def get_models(automaker: str, year: str) -> Set[str]:
     """Filter cars 'data' by 'automaker' and 'year', return a set of models (a
     'set' to avoid duplicate models)"""
-    pass
+    return {
+        item.get("model")
+        for item in DATA
+        if item.get("automaker") == automaker and item.get("year") == year
+    }
