@@ -1,4 +1,4 @@
-from belts import BeltStats, ninja_belts, get_total_points
+from belts import BeltStats, get_total_points, ninja_belts
 
 
 def test_get_total_points_given_belts():

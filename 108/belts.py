@@ -1,4 +1,4 @@
-from typing import NamedTuple, Mapping
+from typing import Mapping, NamedTuple
 
 
 class BeltStats(NamedTuple):

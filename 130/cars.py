@@ -1,4 +1,5 @@
-from typing import Set, Counter
+from typing import Counter, Set
+
 import requests
 
 DATA_URL = "https://bit.ly/2Ov65SJ"

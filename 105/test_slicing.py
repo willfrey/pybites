@@ -1,4 +1,4 @@
-from slicing import text, slice_and_dice
+from slicing import slice_and_dice, text
 
 another_text = """
 Take the block of text provided and strip() off the whitespace at the ends.

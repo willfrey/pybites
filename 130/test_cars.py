@@ -1,4 +1,4 @@
-from cars import most_prolific_automaker, get_models
+from cars import get_models, most_prolific_automaker
 
 
 def test_most_prolific_automaker_1999():

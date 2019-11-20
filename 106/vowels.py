@@ -1,5 +1,5 @@
-from typing import Tuple
 import re
+from typing import Tuple
 
 text = """
 The Zen of Python, by Tim Peters
