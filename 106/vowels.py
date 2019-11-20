@@ -30,18 +30,17 @@ VOWELS_PATTERN = re.compile(rf"[{vowels}]", flags=re.IGNORECASE)
 
 
 def strip_vowels(text: str) -> Tuple[str, int]:
-    """Replace all vowels in the input text string by a star
-       character (*).
-       Return a tuple of (replaced_text, number_of_vowels_found)
+    """Replace all vowels in the input text string by a star character (*).
+    Return a tuple of (replaced_text, number_of_vowels_found)
 
-       So if this function is called like:
-       strip_vowels('hello world')
+    So if this function is called like:
+    strip_vowels('hello world')
 
-       ... it would return:
-       ('h*ll* w*rld', 3)
+    ... it would return:
+    ('h*ll* w*rld', 3)
 
-       The str/int types in the function defintion above are part
-       of Python's new type hinting:
-       https://docs.python.org/3/library/typing.html
+    The str/int types in the function defintion above are part
+    of Python's new type hinting:
+    https://docs.python.org/3/library/typing.html
     """
     return re.subn(rf"[{vowels}]", "*", text, flags=re.IGNORECASE)

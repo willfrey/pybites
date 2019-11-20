@@ -1,5 +1,5 @@
-"""These tests have some more advanced pytest features, if new to
-   pytest read: https://pybit.es/pytest-coding-100-tests.html"""
+"""These tests have some more advanced pytest features, if new to pytest read:
+https://pybit.es/pytest-coding-100-tests.html."""
 import pytest
 
 from workouts import get_workout_motd
