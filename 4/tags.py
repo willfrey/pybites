@@ -1,9 +1,8 @@
-import os
 from collections import Counter
+import os
+import re
 from typing import List, Tuple
 import urllib.request
-import re
-
 
 # prep
 tempfile = os.path.join("/tmp", "feed")

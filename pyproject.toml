@@ -3,21 +3,13 @@ name = "bitesofpy"
 version = "0.1.0"
 description = ""
 authors = ["Will Frey <jfrey89@gmail.com>"]
-packages = [
-    {include = "101"},
-    {include = "102"},
-    {include = "103"},
-    {include = "104"},
-    {include = "105"},
-    {include = "106"}
-]
 
 [tool.poetry.dependencies]
 python = "^3.7"
 requests = "^2.22.0"
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.2.4"
+pytest = "^5.3.1"
 flake8-import-order = "^0.18.1"
 pandas = "^0.25.3"
 jupyter = "^1.0.0"
